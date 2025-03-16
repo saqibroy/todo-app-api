@@ -8,12 +8,7 @@ server.use(middlewares);
 // Custom route to return the desired structure
 server.get('/todos', (req, res) => {
   const db = router.db.getState(); // Get the current database state
-  res.jsonp({
-    todos: db.todos,
-    total: db.total,
-    skip: db.skip,
-    limit: db.limit
-  });
+  res.jsonp(db.todos); // Return only the array of todos
 });
 
 server.use(router);
