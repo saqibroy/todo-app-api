@@ -1,6 +1,6 @@
 # **JSON Server API**
 
-![Node.js CI](https://github.com/saqibroy/todo-app-api/workflows/Node.js%20CI/badge.svg)
+![Node.js CI](https://img.shields.io/github/actions/workflow/status/saqibroy/todo-app-api/node.js.yml?branch=master)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 Live API URL: [https://todo-app-api-production-2b49.up.railway.app/todos](https://todo-app-api-production-2b49.up.railway.app/todos)
