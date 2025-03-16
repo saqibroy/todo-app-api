@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  api:
+    build: .  # Builds the image using the Dockerfile in the root directory
+    ports:
+      - "3000:3000"  # Maps host port 3000 to container port 3000
+    volumes:
+      - todo-data:/data  # Persistent storage for db.json
+    environment:
+      - DB_PATH=/data/db.json  # Override the DB_PATH to use the volume
+    command: sh -c "cp -n /app/src/db.json /data/db.json && node src/server.js"  # Copy db.json to volume on first run
+
+volumes:
+  todo-data:  # Named volume for persistent data
