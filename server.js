@@ -17,6 +17,9 @@ server.get('/todos', (req, res) => {
 });
 
 server.use(router);
-server.listen(3001, () => {
-  console.log('JSON Server is running on port 3001');
+
+// Use the PORT environment variable or default to 3001 for local development
+const port = process.env.PORT || 3001;
+server.listen(port, () => {
+  console.log(`JSON Server is running on port ${port}`);
 });
