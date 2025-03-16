@@ -20,8 +20,5 @@ EXPOSE 3000
 ENV PORT=3000
 ENV DB_PATH=/app/src/db.json
 
-# Use a volume for persistent data
-VOLUME /data
-
 # Start the server
 CMD ["node", "src/server.js"]
